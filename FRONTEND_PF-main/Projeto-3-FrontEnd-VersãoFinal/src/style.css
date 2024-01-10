@@ -1,0 +1,19 @@
+
+.aumento{
+  color: green;
+}
+.decrescimo{
+  color: red;
+}
+.botao{
+  background-color: cornflowerblue;
+  color:white;
+  border-radius: 4px;
+  border: none;
+
+}
+.botao2{
+  color:black;
+  border: none;
+  border-radius: 4px;
+}

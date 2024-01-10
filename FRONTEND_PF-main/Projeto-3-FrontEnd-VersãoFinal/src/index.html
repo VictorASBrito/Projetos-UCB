@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>    
+<head>
+  <title>Projeto 3 - GabriellMatias</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container ">
+
+        <nav class="navbar navbar-light bg-light">
+            <h2>Meu Painel</h2>
+
+            <table>
+
+                <div><i class="fa fa-home"> Painel</i></div>
+                <div><i class="fa-regular fa-file"> Ordens</i></div>
+                <div><i class="fa-solid fa-cart-shopping"> Produtos</i></div>
+                <div><i class="fa-solid fa-users"> Clientes</i></div>
+                <div><i class="fa-solid fa-list"> Relatórios</i></div>
+
+            </table>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            </form>
+        </nav>
+
+
+    </div>
+
+
+  <h1 class="text-center">Painel</h1>
+  <h5 class="text-center">Essa é a página inicial de um painel administrativo</h5>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="card-title">Clientes</h4>
+            <h6>345 mil</h6>
+            <h6>Abril/2023 - Junho/2023, Brasília-DF</h6>
+            <h6 style="color: green;">18,2% de aumento no período</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="card-title">Receita</h4>
+            <h6>R$ 2,4 milhões</h6>
+            <h6>Abril/2023 - Junho/2023, Brasília-DF</h6>
+            <h6 style="color: green;">4,6% de aumento no período</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="card-title">Compras</h4>
+            <h6>42 unidades</h6>
+            <h6>Abril/2023 - Junho/2023, Brasília-DF</h6>
+            <h6 style="color: red;">2,6% de decréscimo no período</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="card-title">Tráfego</h4>
+            <h6>64 mil</h6>
+            <h6>Abril/2023 - Junho/2023, Brasília-DF</h6>
+            <h6 style="color: green;">2,5% de aumento no período</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+        <div class="d-flex" >
+          <div class="col-md-6">
+            <div >
+              <h5 class="card-title">Tráfego últimos 6 meses</h5>
+                <canvas id="myChart"></canvas>
+                
+            </div>
+          </div>
+          <div class="container d-flex ">
+            <div class="card">
+                <h5 class="card-header">Ultimas Transações</h5>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <th>Ordem</th>
+                            <th>Produto</th>
+                            <th>CLiente</th>
+                            <th>Total</th>
+                            <th>Data</th>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023001</td>
+                                <td>Produto1</td>
+                                <td>jotinha@email.com</td>
+                                <td>R$61,11</td>
+                                <td>29/06/2023</td>
+                                <td><button onclick="myFunction()" class="botao">Detalhes</button></td>
+                            </tr>
+        
+                            <tr>
+                                <td>2023002</td>
+                                <td>Produto2</td>
+                                <td>Safira@email.com</td>
+                                <td>R$53,11</td>
+                                <td>20/05/2023</td>
+                                <td><button onclick="myFunction()" class="botao">Detalhes</button></td>
+        
+                            </tr>
+        
+                            <tr>
+                                <td>2023003</td>
+                                <td>Produto3</td>
+                                <td>VictorB@email.com</td>
+                                <td>R$66,98</td>
+                                <td>21/04/2023</td>
+                                <td><button onclick="myFunction()" class="botao">Detalhes</button></td>
+        
+                            </tr>
+        
+                            <tr>
+                                <td>2023004</td>
+                                <td>Produto5</td>
+                                <td>Matias@email.com</td>
+                                <td>R$23,65</td>
+                                <td>17/03/2023</td>
+                                <td><button onclick="myFunction()" class="botao">Detalhes</button></td>
+        
+                            </tr>
+                        </tbody>
+                        <td><button onclick="myFunction()" class="botao2">Todas as Transações</button></td>
+        
+                    </table>
+                </div>    
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer justify-content-center mt-xxl-5">
+        <div class="container">
+          <span class="text-muted">&copy; @2023  / Dev by Victor Brito / Contato</span>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+</html>
+
+

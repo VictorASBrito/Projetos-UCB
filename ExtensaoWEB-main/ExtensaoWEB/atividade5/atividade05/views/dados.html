@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Formulário</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Dados do Formulário</h1>
+        <p>Nome: <span id="nome"></span></p>
+        <p>Endereço: <span id="endereco"></span></p>
+        <p>Telefone: <span id="telefone"></span></p>
+        <p>Data de Agendamento: <span id="data"></span></p>
+        <a href="/" class="btn btn-primary">Voltar</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Obtém os parâmetros da URL (para acessar os dados do POST)
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+
+        // Preenche os campos com os dados recebidos
+        document.getElementById("nome").textContent = params.nome || "Não informado";
+        document.getElementById("endereco").textContent = params.endereco || "Não informado";
+        document.getElementById("telefone").textContent = params.telefone || "Não informado";
+        document.getElementById("data").textContent = params.data || "Não informada";
+    </script>
+</body>
+</html>
